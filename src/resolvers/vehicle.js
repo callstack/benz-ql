@@ -2,9 +2,12 @@ const ConnectedVehicleStatus = require('../adapters/connectedVehicleStatus');
 
 module.exports = scope => ({
   Query: {
-    getVehicle: (parent, { id }) => ({
-      id,
-    }),
+    getVehicle: async (parent, { id: vehicleID }, { authToken }) => {
+      const data = await ConnectedVehicleStatus.withScope(scope)
+        .withToken(authToken)
+        .get_vehicleinfo(vehicleID);
+      return data;
+    },
   },
   Vehicle: {
     stateofcharge: async ({ id: vehicleID }, _, { authToken }) => {
@@ -14,11 +17,9 @@ module.exports = scope => ({
       return stateofcharge;
     },
     location: async ({ id: vehicleID }, _, { authToken }) => {
-      console.log('authToken', authToken);
       const location = await ConnectedVehicleStatus.withScope(scope)
         .withToken(authToken)
         .get_location(vehicleID);
-      console.log('res', location);
       return location;
     },
   },

@@ -18,20 +18,11 @@ class Adapter {
   }
 
   performRequest(url) {
-    try {
-      console.log(this.getUrl() + url, {
+    return nodeFetch(this.getUrl() + url, {
+      headers: {
         authorization: `Bearer ${this.token}`,
-      });
-
-      return nodeFetch(this.getUrl() + url, {
-        headers: {
-          authorization: `Bearer ${this.token}`,
-        },
-      }).then(res => res.json());
-    } catch (e) {
-      console.log('error', e);
-      return {};
-    }
+      },
+    }).then(res => res.json());
   }
 
   withScope(scope) {

@@ -10,6 +10,10 @@ class ElectricVehicleStatus extends Adapter {
     super(sandboxUrl, prodUrl);
   }
 
+  async get_vehicleinfo(vehicleID) {
+    return this.performRequest(`/vehicles/${vehicleID}`);
+  }
+
   async get_stateofcharge(vehicleID) {
     return this.performRequest(`/vehicles/${vehicleID}/stateofcharge`);
   }

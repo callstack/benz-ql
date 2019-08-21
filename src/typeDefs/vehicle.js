@@ -5,6 +5,17 @@ module.exports = gql`
     id: String!
     stateofcharge: StateOfCharge!
     location: Location!
+    licenseplate: String
+    salesdesignation: String
+    finorvin: String
+    nickname: String
+    modelyear: Int
+    colorname: String
+    fueltype: Int
+    powerhp: Int
+    powerkw: Int
+    numberofdoors: Int
+    numberofseats: Int
   }
 
   type StateOfCharge {
