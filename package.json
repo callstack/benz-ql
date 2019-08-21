@@ -1,0 +1,21 @@
+{
+  "name": "benz-ql",
+  "version": "1.0.0",
+  "description": "GraphQL wrapper over Mercedess-Benz REST API.",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint ./src/*.js",
+    "lintFix": "eslint ./src/*.js --fix"
+  },
+  "dependencies": {
+    "graphql": "^14.4.2",
+    "graphql-tag": "^2.10.1"
+  },
+  "devDependencies": {
+    "@callstack/eslint-config": "^7.0.0",
+    "apollo-server-express": "^2.8.2",
+    "eslint": "^6.2.1",
+    "express": "^4.17.1"
+  }
+}
