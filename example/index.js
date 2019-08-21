@@ -7,7 +7,7 @@ const beznQL = require('../src/index');
 
 const app = express();
 const PORT = 3000;
-const server = new ApolloServer(beznQL);
+const server = new ApolloServer(beznQL('sandbox'));
 
 server.applyMiddleware({ app, path: '/benz-ql' });
 

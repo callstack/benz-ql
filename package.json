@@ -6,16 +6,23 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint ./src/*.js",
-    "lintFix": "eslint ./src/*.js --fix"
+    "lintFix": "eslint ./src/*.js --fix",
+    "dev": "cd example && nodemon --exec babel-node index.js --watch ../"
   },
   "dependencies": {
     "graphql": "^14.4.2",
-    "graphql-tag": "^2.10.1"
+    "graphql-tag": "^2.10.1",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "@callstack/eslint-config": "^7.0.0",
     "apollo-server-express": "^2.8.2",
+    "babel-preset-latest": "^6.24.1",
     "eslint": "^6.2.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
   }
 }
