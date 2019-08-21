@@ -54,7 +54,14 @@
         endpoint: '/benz-ql',
         settings: {
           "editor.theme": 'light'
-        }
+        },
+        tabs: [{
+          endpoint: '/benz-ql',
+          query: 'query {\n hello\n}',
+          headers: {
+            'Authorization': ''
+          }
+        }]
       })
     })
   </script>
