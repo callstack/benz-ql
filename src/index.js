@@ -1,10 +1,10 @@
-const typeDefs = require('./typeDefs/index');
-const exampleResolver = require('./resolvers/vehicle');
-const authContext = require('./authContext');
-const scopes = require('./scopes');
+import typeDefs from './typeDefs';
+import resolvers from './resolvers';
+import authContext from './authContext';
+import scopes from './scopes';
 
-module.exports = (scope = scopes.PROD) => ({
+export default (scope = scopes.PROD) => ({
   typeDefs: typeDefs,
-  resolvers: [exampleResolver(scope)],
+  resolvers: resolvers(scope),
   context: authContext,
 });

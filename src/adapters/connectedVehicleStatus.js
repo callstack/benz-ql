@@ -1,4 +1,4 @@
-const Adapter = require('./Adapter');
+import Adapter from './Adapter';
 
 const SANDBOX_URL =
   'https://api.mercedes-benz.com/experimental/connectedvehicle_tryout/v1';
@@ -23,4 +23,4 @@ class ElectricVehicleStatus extends Adapter {
   }
 }
 
-module.exports = new ElectricVehicleStatus(SANDBOX_URL, PROD_URL);
+export default new ElectricVehicleStatus(SANDBOX_URL, PROD_URL);

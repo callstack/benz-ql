@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint ./src/*.js",
     "lintFix": "eslint ./src/*.js --fix",
-    "dev": "cd example && nodemon --exec babel-node index.js --watch ../"
+    "dev": "nodemon --exec babel-node example/index.js"
   },
   "dependencies": {
     "graphql": "^14.4.2",

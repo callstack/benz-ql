@@ -1,6 +1,6 @@
-const gql = require('graphql-tag');
+import gql from 'graphql-tag';
 
-module.exports = gql`
+export default gql`
   type Vehicle {
     id: String!
     stateofcharge: StateOfCharge!

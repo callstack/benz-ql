@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   PROD: 'PROD',
   SANDBOX: 'SANDBOX',
 };

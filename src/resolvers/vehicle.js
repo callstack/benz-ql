@@ -1,6 +1,6 @@
-const ConnectedVehicleStatus = require('../adapters/connectedVehicleStatus');
+import ConnectedVehicleStatus from '../adapters/connectedVehicleStatus';
 
-module.exports = scope => ({
+export default scope => ({
   Query: {
     getVehicle: async (parent, { id: vehicleID }, { authToken }) => {
       const data = await ConnectedVehicleStatus.withScope(scope)

@@ -1,6 +1,5 @@
-const nodeFetch = require('node-fetch');
-
-const scopes = require('../scopes');
+import nodeFetch from 'node-fetch';
+import scopes from '../scopes';
 
 class Adapter {
   constructor(sandboxUrl, prodUrl) {
@@ -36,4 +35,4 @@ class Adapter {
   }
 }
 
-module.exports = Adapter;
+export default Adapter;

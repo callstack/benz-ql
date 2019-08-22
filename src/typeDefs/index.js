@@ -1,4 +1,4 @@
-const vehicleSchema = require('./vehicle.js');
+import vehicleSchema from './vehicle.js';
 
 const linkSchema = `
   type Query {
@@ -6,4 +6,4 @@ const linkSchema = `
   }
 `;
 
-module.exports = [linkSchema, vehicleSchema];
+export default [linkSchema, vehicleSchema];

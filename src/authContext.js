@@ -1,3 +1,3 @@
-module.exports = ({ req }) => ({
+export default ({ req }) => ({
   authToken: req.headers.authorization,
 });
