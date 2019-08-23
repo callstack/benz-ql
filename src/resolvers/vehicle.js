@@ -1,6 +1,6 @@
 import ConnectedVehicleStatus from '../adapters/connectedVehicleStatus';
 
-export default scope => () => {
+export default scope => {
   const ConnectedVehicleStatusAdapter = ConnectedVehicleStatus.withScope(scope);
   return {
     Query: {
