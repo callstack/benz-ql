@@ -7,22 +7,31 @@
   "scripts": {
     "lint": "eslint ./src/*.js",
     "lintFix": "eslint ./src/*.js --fix",
-    "dev": "nodemon --exec babel-node example/index.js"
+    "dev": "nodemon --exec babel-node example/index.js",
+    "build-example": "mkdir build-example && babel src -d build-example/src && babel example -d build-example/example && cp -r example/static build-example/example",
+    "start": "node build-example/example/index.js",
+    "heroku-postbuild": "yarn build-example && yarn add express apollo-server-express"
   },
   "dependencies": {
+    "@babel/runtime": "^7.5.5",
     "graphql": "^14.4.2",
     "graphql-tag": "^2.10.1",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "express": "^4.17.1",
+    "apollo-server-express": "^2.8.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
     "@babel/core": "^7.5.5",
-    "@babel/node": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.0.0",
     "@callstack/eslint-config": "^7.0.0",
-    "apollo-server-express": "^2.8.2",
-    "babel-preset-latest": "^6.24.1",
     "eslint": "^6.2.1",
-    "express": "^4.17.1",
     "nodemon": "^1.19.1"
+  },
+  "engines": {
+    "node": "10.x",
+    "yarn": "1.x"
   }
 }
