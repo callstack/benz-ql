@@ -42,11 +42,11 @@ This package can be used with different server frameworks supported by Apollo. I
 ```js
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
-import benzQL from "benz-ql";
+import benzQL, { scopes } from "benz-ql";
 
 const app = express();
 const PORT = 3000;
-const server = new ApolloServer(benzQL("SANDBOX")); // chose your environment - SANDBOX or PROD
+const server = new ApolloServer(benzQL(scopes.SANDBOX)); // chose your environment - SANDBOX or PROD
 
 server.applyMiddleware({ app, path: "/benz-ql" });
 
@@ -60,9 +60,9 @@ app.listen(PORT, () => {
 
 Once you set up a development server and start it successfuly, you can connect with it by using GraphQL client of your choice. In this section, we are using a `apollo-boost` package in context of a React Native application.
 
-> Note: You will need a token for accessing Mercedes APIs. Please consult [official documentation](https://developer.mercedes-benz.com/apis) for steps to do so. 
+> Note: You will need a token for accessing Mercedes APIs. Please consult [official documentation](https://developer.mercedes-benz.com/apis) for steps to do so.
 
-Below example demonstrates accessing battery level from the API, including potential error handling. 
+Below example demonstrates accessing battery level from the API, including potential error handling.
 
 ```js
 import React from "react";
