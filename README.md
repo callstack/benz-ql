@@ -141,11 +141,11 @@ Here is the list of supported APIs. Contributions are welcome to support the rem
   </tr>
   <tr>
     <td>Tires</td>
-    <td>pending</td>
+    <td>implemented</td>
   </tr>
   <tr>
     <td>Doors</td>
-    <td>pending</td>
+    <td>implemented</td>
   </tr>
   <tr>
     <td>Location</td>
@@ -153,11 +153,11 @@ Here is the list of supported APIs. Contributions are welcome to support the rem
   </tr>
   <tr>
     <td>Odometer</td>
-    <td>pending</td>
+    <td>implemented</td>
   </tr>
   <tr>
     <td>Fuel</td>
-    <td>pending</td>
+    <td>implemented</td>
   </tr>
   <tr>
     <td>State of Charge</td>
