@@ -4,7 +4,7 @@
 
 Wraps available Mercedes APIs and allows you to query them via a single endpoint, using GraphQL.
 
-```js
+```graphql
 query {
   getVehicle(id: "1234567890ABCD1234") {
     licenseplate
