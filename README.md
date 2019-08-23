@@ -4,9 +4,26 @@
 
 Wraps available Mercedes APIs and allows you to query them via a single endpoint, using GraphQL.
 
-You can play with the API [here](https://benz-ql.herokuapp.com/), before setting it up locally.
+```js
+query {
+  getVehicle(id: "1234567890ABCD1234") {
+    licenseplate
+    stateofcharge {
+      value
+    }
+    location {
+      longitude {
+        value
+      }
+      latitude {
+        value
+      }
+    }
+  }
+}
+```
 
-> Note: This project is under heavy development and only a small subset of features are available right now. We are working on adding the remaining APIs as we being working with them. Feel free to send a PR with the features you need.
+You can explore the query response by playing around with the online playground [here](https://benz-ql.herokuapp.com/)
 
 ## Getting started
 
@@ -92,31 +109,6 @@ class Home extends React.Component {
   }
 }
 ```
-
-### Sample query
-
-Below is a sample query that gets data from three different Mercedes APIs (hence it will result in executing three different HTTP requests in the background).
-
-```js
-query {
-  getVehicle(id: "1234567890ABCD1234") {
-    licenseplate
-    stateofcharge {
-      value
-    }
-    location {
-      longitude {
-        value
-      }
-      latitude {
-        value
-      }
-    }
-  }
-}
-```
-
-You can browse the query response by playing with built-in Prisma playground, either locally, or by using our deployed version [here](https://benz-ql.herokuapp.com/).
 
 ## Contributing
 
