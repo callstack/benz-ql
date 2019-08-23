@@ -99,9 +99,9 @@ query {
 }
 ```
 
-You can browse query response by running example server and using build-in Prisma graphql-playground.
+You can browse query response by running example server and using build-in Prisma graphql-playground or using the deployed version [here](https://benz-ql.herokuapp.com/).
 
-<img alt="graphql playground example query" src="docs/example-query.png" >
+[<img alt="graphql playground example query" src="docs/example-query.png" >](https://benz-ql.herokuapp.com/)
 
 ### Run example server
 
