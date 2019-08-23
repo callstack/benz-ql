@@ -10,8 +10,10 @@ query {
       value
     }
     location {
-      longitude
-      latitude
+      longitude {
+        value
+        unit
+      }
     }
   }
 }
