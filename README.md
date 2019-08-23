@@ -1,8 +1,6 @@
 # benz-ql
 
-> Apollo GraphQL server for the Mercedes-Benz REST APIs https://developer.mercedes-benz.com/
-
-Wraps available Mercedes APIs and allows you to query them via a single endpoint, using GraphQL.
+An Apollo GraphQL server for the [Mercedes-Benz REST APIs](https://developer.mercedes-benz.com/). Allows to query them via a single endpoint, using GraphQL.
 
 ```graphql
 query {
@@ -12,18 +10,16 @@ query {
       value
     }
     location {
-      longitude {
-        value
-      }
-      latitude {
-        value
-      }
+      longitude
+      latitude
     }
   }
 }
 ```
 
-You can explore the query response by playing around with the online playground [here](https://benz-ql.herokuapp.com/)
+## Try it now
+
+You can explore the query response by playing around with the [online playground](https://benz-ql.herokuapp.com/)
 
 ## Getting started
 
