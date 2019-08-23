@@ -4,11 +4,11 @@ import { ApolloServer } from 'apollo-server-express';
 import fs from 'fs';
 import path from 'path';
 
-import beznQL from '../src/index.js';
+import benzQL from '../src/index.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const server = new ApolloServer(beznQL('SANDBOX'));
+const server = new ApolloServer({ ...benzQL('SANDBOX'), introspection: true });
 
 server.applyMiddleware({ app, path: '/benz-ql' });
 

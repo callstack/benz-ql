@@ -14,11 +14,11 @@ In this example we will use express-based server.
 ```js
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
-import beznQL from "benz-ql";
+import benzQL from "benz-ql";
 
 const app = express();
 const PORT = 3000;
-const server = new ApolloServer(beznQL("SANDBOX")); // chose your environment - SANDBOX or PROD
+const server = new ApolloServer(benzQL("SANDBOX")); // chose your environment - SANDBOX or PROD
 
 server.applyMiddleware({ app, path: "/benz-ql" });
 
