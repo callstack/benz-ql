@@ -10,6 +10,10 @@ class ElectricVehicleStatus extends Adapter {
     super(sandboxUrl, prodUrl);
   }
 
+  async get_allvehicles() {
+    return this.performRequest(`/vehicles`);
+  }
+
   async get_vehicleinfo(vehicleID) {
     return this.performRequest(`/vehicles/${vehicleID}`);
   }
@@ -20,6 +24,22 @@ class ElectricVehicleStatus extends Adapter {
 
   async get_location(vehicleID) {
     return this.performRequest(`/vehicles/${vehicleID}/location`);
+  }
+
+  async get_tires(vehicleID) {
+    return this.performRequest(`/vehicles/${vehicleID}/tires`);
+  }
+
+  async get_doors(vehicleID) {
+    return this.performRequest(`/vehicles/${vehicleID}/doors`);
+  }
+
+  async get_odometer(vehicleID) {
+    return this.performRequest(`/vehicles/${vehicleID}/odometer`);
+  }
+
+  async get_fuel(vehicleID) {
+    return this.performRequest(`/vehicles/${vehicleID}/fuel`);
   }
 }
 
