@@ -1,15 +1,26 @@
 # benz-ql
 
+> Apollo GraphQL server for the Mercedes-Benz REST APIs https://developer.mercedes-benz.com/
+
+Wraps available Mercedes APIs and allows you to query them via a single endpoint, using GraphQL.
+
+You can play with the API [here](https://benz-ql.herokuapp.com/), before setting it up locally.
+
+> Note: This project is under heavy development and only a small subset of features are available right now. We are working on adding the remaining APIs as we being working with them. Feel free to send a PR with the features you need.
+
 ## Getting started
 
-To get started install the package.
+To get started, install the package from the registry:
 
-`yarn add benz-ql`
+```bash
+$ yarn add benz-ql
+```
+
+## Configuraton
 
 ### Setting up the server
 
-Package can be used with different server frameworks supported by Apollo.
-In this example we will use express-based server.
+This package can be used with different server frameworks supported by Apollo. In this example, we will be using Express.
 
 ```js
 import express from "express";
@@ -29,6 +40,12 @@ app.listen(PORT, () => {
 ```
 
 ### Connecting from the client
+
+Once you set up a development server and start it successfuly, you can connect with it by using GraphQL client of your choice. In this section, we are using a `apollo-boost` package in context of a React Native application.
+
+> Note: You will need a token for accessing Mercedes APIs. Please consult [official documentation](https://developer.mercedes-benz.com/apis) for steps to do so. 
+
+Below example demonstrates accessing battery level from the API, including potential error handling. 
 
 ```js
 import React from "react";
@@ -78,7 +95,7 @@ class Home extends React.Component {
 
 ### Sample query
 
-This query will get data from three different REST endpoint at once
+Below is a sample query that gets data from three different Mercedes APIs (hence it will result in executing three different HTTP requests in the background).
 
 ```js
 query {
@@ -99,11 +116,13 @@ query {
 }
 ```
 
-You can browse query response by running example server and using build-in Prisma graphql-playground or using the deployed version [here](https://benz-ql.herokuapp.com/).
+You can browse the query response by playing with built-in Prisma playground, either locally, or by using our deployed version [here](https://benz-ql.herokuapp.com/).
 
-[<img alt="graphql playground example query" src="docs/example-query.png" >](https://benz-ql.herokuapp.com/)
+## Contributing
 
 ### Run example server
+
+This project comes with a development server that is useful for debugging and developing the library. In order to get started, follow the steps below:
 
 1. Clone this repo
 2. `yarn install`
@@ -111,9 +130,11 @@ You can browse query response by running example server and using build-in Prism
 4. `node index.js`
 5. Open [http://localhost:3000](http://localhost:3000)
 
-> Example server uses sandbox environment.
+> Note: Example server uses sandbox environment
 
 ## Coverage table
+
+Here is the list of supported APIs. Contributions are welcome to support the remaining list.
 
 <table>
   <tr>
@@ -344,9 +365,3 @@ You can browse query response by running example server and using build-in Prism
     <td>pending</td>
   </tr>
 </table>
-
-## Development
-
-To run example server in development mode run
-
-`yarn dev`
