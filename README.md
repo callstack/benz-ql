@@ -20,7 +20,7 @@ query {
 
 ## Try it now
 
-You can explore the query response by playing around with the [online playground](https://benz-ql.herokuapp.com/)
+You can explore the query response by playing around with the [online playground](https://benz-ql.herokuapp.com/).
 
 ## Getting started
 
