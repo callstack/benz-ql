@@ -12,7 +12,6 @@ query {
     location {
       longitude {
         value
-        unit
       }
     }
   }
