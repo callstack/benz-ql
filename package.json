@@ -16,7 +16,7 @@
     "@babel/runtime": "^7.5.5",
     "graphql": "^14.4.2",
     "graphql-tag": "^2.10.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "express": "^4.17.1",
     "apollo-server-express": "^2.8.2"
   },
